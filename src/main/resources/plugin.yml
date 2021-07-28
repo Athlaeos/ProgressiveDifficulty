@@ -1,0 +1,79 @@
+name: ProgressiveDifficulty_MOBS
+version: 1.0
+api-version: 1.14
+main: me.athlaeos.progressivelydifficultmobs.main.Main
+authors: [Athlaeos]
+softdepend: [WorldGuard]
+loadbefore: [WorldGuard]
+description: A fully customizable plugin featuring a karma system that will slowly make mobs more or less difficult
+website: https://discord.gg/dUwtmYV
+
+commands:
+  pdm:
+    description: 'Base command for the Progressive Difficulty: MOBS plugin'
+    usage: /pdm help
+
+permissions:
+  pdm.managemobs:
+    description: Permission to manage monsters. Delete, edit, and create new ones.
+    default: op
+  pdm.manageloottables:
+    description: Permission to manage LootTables. Delete, edit, and create new ones.
+    default: op
+  pdm.getownkarma:
+    description: Permission to view your own karma
+    default: op
+  pdm.getkarma:
+    description: Permission to view your own karma, or other's karma
+    default: op
+  pdm.getcurse:
+    description: Permission to view your own curse
+    default: op
+  pdm.getowncurse:
+    description: Permission to view your own curse, or other's curse
+    default: op
+  pdm.setownkarma:
+    description: Permission to set your own karma
+    default: op
+  pdm.help:
+    description: Permission to use the /pdm help command
+    default: true
+  pdm.getlocaldifficulty:
+    description: Permission to use the /pdm localdifficulty command
+    default: op
+  pdm.toggleownkarma:
+    description: Permission to toggle your own karma at any time
+    default: op
+  pdm.managekarma:
+    description: Permission to change your own and others' karma, as well as toggling karma usage of players on/off
+    default: op
+  pdm.ignoreforcekarma:
+    description: If karma is force enabled, having this permission allows your karma to be disabled
+    default: op
+  pdm.managecurse:
+    description: Permission to change your own and others' curse
+    default: op
+  pdm.setowncurse:
+    description: Permission to change your own curse
+    default: op
+  pdm.cancelitemcooldowns:
+    description: With this permission custom items won't start any cooldown upon use
+    default: op
+  pdm.getowncooldowns:
+    description: Permission to view your cooldowns using the /pdm cooldowns command
+    default: op
+  pdm.managecooldowns:
+    description: Permission to view and set your own or other's cooldowns using the /pdm cooldowns command
+    default: op
+  pdm.reload:
+    description: Permission to reload the plugin's configs, this loads all changes from the configs
+    default: op
+  pdm.giveitems:
+    description: Permission to give yourself any custom item
+    default: op
+  pdm.manageperks:
+    description: Permission to manage perks for levels and players
+    default: op
+  pdm.getownperks:
+    description: Permission to view your own active perks
+    default: op

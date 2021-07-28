@@ -1,0 +1,106 @@
+# This config contains all the karma values given on certain actions other than killing monsters,
+# which are configured in-game.
+
+# Karma given when certain blocks are broken
+karma_block_break:
+  WHEAT: 2.0
+  POTATOES: 2.0
+  CARROTS: 2.0
+  BEETROOTS: 2.0
+  MELON: 2.0
+  PUMPKIN: 2.0
+  FURNACE: 5.0
+  SMOKER: 5.0
+  BLAST_FURNACE: 5.0
+  TNT: 5.0
+  BEE_NEST: -30.0
+  BEEHIVE: -30.0
+
+# Karma given when certain blocks are placed
+karma_block_place:
+  OAK_LEAVES: 1.0
+  BIRCH_LEAVES: 1.0
+  SPRUCE_LEAVES: 1.0
+  ACACIA_LEAVES: 1.0
+  JUNGLE_LEAVES: 1.0
+  DARK_OAK_LEAVES: 1.0
+  OAK_SAPLING: 3.0
+  BIRCH_SAPLING: 3.0
+  SPRUCE_SAPLING: 3.0
+  ACACIA_SAPLING: 3.0
+  JUNGLE_SAPLING: 3.0
+  DARK_OAK_SAPLING: 3.0
+  OAK_LOG: 2.0
+  BIRCH_LOG: 2.0
+  SPRUCE_LOG: 2.0
+  ACACIA_LOG: 2.0
+  JUNGLE_LOG: 2.0
+  DARK_OAK_LOG: 2.0
+  OAK_WOOD: 2.0
+  BIRCH_WOOD: 2.0
+  SPRUCE_WOOD: 2.0
+  ACACIA_WOOD: 2.0
+  JUNGLE_WOOD: 2.0
+  DARK_OAK_WOOD: 2.0
+  LAVA: -20.0
+  FIRE: -10.0
+  GRASS: 1.0
+  FERN: 1.0
+  SEAGRASS: 1.0
+  SUGAR_CANE: 1.0
+  VINE: 1.0
+  TALL_GRASS: 1.0
+  LARGE_FERN: 1.0
+  BEE_NEST: 30.0
+  BEEHIVE: 30.0
+  TNT: -10.0
+  TUBE_CORAL: 2.0
+  BRAIN_CORAL: 2.0
+  BUBBLE_CORAL: 2.0
+  FIRE_CORAL: 2.0
+  HORN_CORAL: 2.0
+  TUBE_CORAL_FAN: 2.0
+  BRAIN_CORAL_FAN: 2.0
+  BUBBLE_CORAL_FAN: 2.0
+  FIRE_CORAL_FAN: 2.0
+  HORN_CORAL_FAN: 2.0
+  KELP: 2.0
+  BAMBOO: 2.0
+  SUNFLOWER: 3.0
+  LILAC: 3.0
+  ROSE_BUSH: 3.0
+  PEONY: 3.0
+
+karma_animal_breed:
+  COW: 10
+  HORSE: 10
+  PIG: 10
+  CHICKEN: 6
+  SHEEP: 10
+  CAT: 10
+  DONKEY: 10
+  FOX: 10
+  MUSHROOM_COW: 20 # Double default value because they're quite rare therefore "endangered"
+  MULE: 10
+  OCELOT: 10
+  RABBIT: 10
+  TURTLE: 10
+  WOLF: 10
+  LLAMA: 10
+  PANDA: 10 # Pandas are endangered, but they're pretty much begging to go extinct with how little they care to breed
+  POLAR_BEAR: 20 # Double value because polar bears are endangered
+  HOGLIN: 10
+  STRIDER: 15
+
+
+
+
+
+
+
+
+
+
+
+
+

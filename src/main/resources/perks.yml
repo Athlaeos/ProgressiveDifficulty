@@ -1,0 +1,81 @@
+perks:
+  auto_harvest:
+    display_name: '&aFarming: Auto Harvest' # the name that is displayed in the perks selection menu, as well as shown to the player
+  farming_exp:
+    display_name: '&aFarming: EXP on Harvest'
+    exp_chance: 0.3 # The chance of a crop to drop exp when broken
+    exp_amount: 1 # The amount of exp dropped when a crop is broken
+  farming_bonus:
+    display_name: '&aFarming: More Drops'
+    bonus_chance: 0.5 # The chance of a crop to drop extra when broken
+    wheat_bonus: 1 # The amount of wheat dropped extra if a wheat crop is broken
+    carrot_bonus: 2 # "
+    potato_bonus: 2 # "
+    beetroot_bonus: 1 # "
+    netherwart_bonus: 2 # "
+    cocoa_bonus: 2 # "
+  breeding_exp:
+    display_name: '&aFarming: Extra breeding EXP'
+    bonus_chance: 0.5 # The chance for a couple of animals to drop extra EXP when being bred together
+    exp_amount: 5 # The amount of exp dropped extra
+  revive:
+    display_name: '&6Passive: Revive'
+    cooldown: 3600 # Cooldown in seconds
+    health_scale: 0.5 # The fraction of health the player is revived with, must be between 0 and 1
+    resistance_amplifier: 2 # The strength of the resistance buff (0 = I, 1 = II, 2 = III, etc.)
+    resistance_duration: 100 # The duration of the resistance buff in game ticks (20 = 1 second)
+  damage_mitigations:
+    display_name: '&7Damage taken -{decrease}% '
+    include_players: true # If true, damage dealt by players will also be reduced. Otherwise it's just mobs
+  damage_taken:
+    display_name: '&4Damage taken +{increase}%'
+    include_players: true # If true, damage dealt by players will also be increased. Otherwise it's just mobs
+  damage_buff:
+    display_name: '&4Damage dealt +{increase}%'
+    include_players: true # If true, damage dealt to players will also be increased. Otherwise only against mobs
+  damage_nerf:
+    display_name: '&7Damage dealt -{decrease}%'
+    include_players: true # If true, damage dealt to players will also be reduced. Otherwise only against mobs
+  slow_immunity:
+    display_name: '&fPassive: Cleanse Slowness'
+    cooldown: 30 # Cooldown in seconds
+    duration: 3 # Duration of slowness immunity in seconds
+  blind_immunity:
+    display_name: '&8Passive: Cleanse Blindness'
+    cooldown: 30 # Cooldown in seconds
+    duration: 3 # Duration of blindness immunity in seconds
+  explosion_immunity:
+    display_name: '&6Immunity: Explosions'
+  falling_immunity:
+    display_name: '&7Immunity: Fall Damage'
+  fire_immunity:
+    display_name: '&6Immunity: Fire & Lava'
+  magic_immunity:
+    display_name: '&5Immunity: Magic Damage'
+  melee_immunity:
+    display_name: '&7Immunity: Melee Damage'
+  poison_immunity:
+    display_name: '&2Immunity: Poison'
+  projectile_immunity:
+    display_name: '&7Immunity: Projectiles'
+  wither_immunity:
+    display_name: '&8Immunity: Wither'
+  immortality:
+    display_name: '&6Immunity: All'
+  rage:
+    display_name: '&cPassive: Strength on Hit'
+    cooldown: 30 # Cooldown in seconds
+    duration: 100 # Duration of strength buff in game ticks
+    amplifier: 1 # Strength of strength buff (0 = I, 1 = II, 2 = III, etc.)
+  adrenaline:
+    display_name: '&bPassive: Speed on Hit'
+    cooldown: 30 # Cooldown in seconds
+    duration: 100 # Duration of speed buff in game ticks
+    amplifier: 1 # Strength of speed buff (0 = I, 1 = II, 2 = III, etc.)
+  resilient:
+    display_name: '&8Passive: Resistance on Hit'
+    cooldown: 30 # Cooldown in seconds
+    duration: 100 # Duration of resistance buff in game ticks
+    amplifier: 1 # Strength of resistance buff (0 = I, 1 = II, 2 = III, etc.)
+
+level_perks:

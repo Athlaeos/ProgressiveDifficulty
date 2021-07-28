@@ -1,0 +1,200 @@
+
+# ====== GENERAL COMMANDS ==========================================================================
+
+# Appears when players use a command that they do not have permission for
+command_no_permission: '&cYou do not have permission to use this command'
+
+# Appears when players use a command that does not exist
+command_invalid: '&cCommand not recognized! Type &4/pdm help &cto view available commands.'
+
+# Appears when a player has to fill in a number for a command and that number isn't a number
+invalid_number_amount: '&cAmount must be a number'
+
+# Appears when the player uses the '/pdm' command on its own
+pdm_base_command_help: '&eType &6/pdm help &eto view your commands'
+
+# Warning message when the player has to fill in an online player's name for a command and that player isn't online or found
+player_not_found: '&cPlayer could not be found'
+
+# Direct translation for "permissions", used in the '/pdm help' command
+translation_permissions: 'Permissions : '
+
+# Direct translations for 'yes' and 'no' used mostly with the evil_revealing_item to show if an entity is cursed or not
+translation_yes: 'Yes'
+translation_no: 'No'
+
+# ====== PLACEHOLDER API ==========================================================================
+# Only works if you have the PlaceholderAPI expansion for pdm installed, as well as PlaceholderAPI itself- obviously.
+# Install the expansion with '/papi ecloud download ProgressiveDifficulty_MOBS' followed by '/papi reload' or a server restart
+papi_karma_not_enabled: '&7Karma disabled, use &e/pdm togglekarma &7to enable'
+papi_karma_enabled: '&7Karma enabled, good luck'
+
+# ====== COMMANDS =================================================================================
+
+# Warning message when the player uses the '/pdm togglekarma' command while karma is permanently enabled
+warning_karma_enabled_by_default: '&cForced karma usage is enabled by default'
+# Warning message when a player uses the '/pdm togglekarma' command if in the main config 'permanent_enable_on_toggle'
+# is set to 'true'
+warning_karma_cant_be_disabled: '&cOnce enabled, karma can''t be disabled.'
+# Confirmation message when the player has their karma usage enabled, use {player} as placeholder for the player's name
+toggle_karma_message_enabled: '&a{player} has their karma &2enabled'
+# Confirmation message when the player has their karma usage disabled, use {player} as placeholder for the player's name
+toggle_karma_message_disabled: '&c{player} has their karma &4disabled'
+# Description of the '/pdm togglekarma' command within '/pdm help'
+toggle_karma_command_description: '&7Toggles karma usage. If disabled, custom mobs will not spawn for you'
+
+# Confirmation message when the player uses the '/pdm setkarma' command to change their own or someone else's karma
+# Use {player} as placeholder for the player's name and {amount} as placeholder for their new karma value
+set_karma_message: '&a{player}''s karma set to {amount}'
+# Description of the '/pdm setkarma' command within '/pdm help'
+set_karma_command_description: '&7Sets the karma amount of someone to the given amount'
+
+# Confirmation message when the player uses the '/pdm setkarmamult bad' command to change their own or someone else's bad karma multiplier
+# Use {player} as placeholder for the player's name and {amount} as placeholder for their new karma value
+set_bad_karma_multiplier_message: '&a{player}''s bad karma multiplier set to {amount}'
+# Confirmation message when the player uses the '/pdm setkarmamult good' command to change their own or someone else's good karma multiplier
+# Use {player} as placeholder for the player's name and {amount} as placeholder for their new karma value
+set_good_karma_multiplier_message: '&a{player}''s bad karma multiplier set to {amount}'
+# Description of the '/pdm setkarma' command within '/pdm help'
+set_karma_multiplier_command_description: '&7Sets the karma multiplier amount of someone to the given amount'
+
+# Confirmation message when the player uses the '/pdm addkarma' command to give karma to themselves or someone else
+# Use {player} as placeholder for the player's name and {amount} as placeholder for the karma given
+add_karma_message: '&a{player} was given {amount} karma, currently {newamount}'
+# Description of the '/pdm addkarma' command within '/pdm help'
+add_karma_command_description: '&7Adds the given amount of karma to someone, by default it adds a flat true amount, but use ''/pdm addkarma <player> false'' to have it be added naturally'
+
+# Confirmation message when the player uses the '/pdm addcurse' command to give curse to themselves or someone else
+# Use {player} as placeholder for the player's name and {amount} as placeholder for the curse given
+add_curse_message: '&a{player} was given {amount} curse, currently {newamount}'
+# Description of the '/pdm addkarma' command within '/pdm help'
+add_curse_command_description: '&7Adds the given amount of curse to someone'
+
+# Confirmation message when the player uses the '/pdm setcurse' command to change their own or someone else's curse
+# Use {player} as placeholder for the player's name and {amount} as placeholder for their new curse value
+set_curse_message: '&a{player}''s curse set to {amount}'
+# Description of the '/pdm setkarma' command within '/pdm help'
+set_curse_command_description: '&7Sets the curse amount of someone to the given amount'
+
+# Confirmation message when the player uses the '/pdm savechanges' command
+saved_changes_message: '&aSaved changes to monsters and loot tables'
+# Description of the '/pdm savechanges' command within '/pdm help'
+save_changes_command_description: '&7Saves all changes made to LootTable and Monsters to files'
+
+# Confirmation message when the player uses the '/pdm reload' command
+reloaded_plug_command: '&aReloading plugin'
+# Description of the '/pdm reload' command within '/pdm help'
+reload_command_description: '&7Reloads all configs of this plugin'
+
+# Description of the '/pdm viewloottables' command within '/pdm help'
+manage_loot_tables_command_description: '&7Opens a menu to view and edit all loot tables'
+
+# Confirmation message of the '/pdm cooldowns' command when a player views one of their cooldown values
+view_cooldown_message: '&a{player}''s cooldown for {key}: {cooldown}'
+# Confirmation message of the '/pdm cooldowns' command when a player changes someone's cooldown value
+edit_cooldown_message: '&a{player}''s cooldown for {key} was changed to {cooldown}'
+# Error message when the player uses the '/pdm cooldowns' command and enters a key that doesn't exist
+invalid_cooldowns_key_error: '&cKey does not exist'
+# Description of the '/pdm cooldowns' command within '/pdm help'
+manage_cooldowns_command_description: '&7View your own cooldowns or edit them'
+
+# Description of the '/pdm viewmonsters' command within '/pdm help'
+manage_monsters_command_description: '&7Opens a menu to view and edit all monsters'
+
+# Confirmation message when the player uses the '/pdm localdifficulty' command to show their local difficulty level.
+# Use the {level} placeholder to display the local level.
+local_difficulty_message: '&7The local difficulty is level &a{level}'
+# Description of the '/pdm localdifficulty' command within '/pdm help'
+local_difficulty_command_description: '&7Shows the local difficulty level of monsters spawning at your location'
+
+# Confirmation message when the player uses '/pdm getkarma' command to show their own or another player's karma.
+# Use the {player} placeholder to display the player's name and {karma} as placeholder for the player's karma
+get_karma_message: '&7{player} currently has {karma} karma'
+# Description of the '/pdm getkarma' command within '/pdm help'
+get_karma_command_description: '&7Shows your karma or a given player''s karma'
+
+# Confirmation message when the player uses '/pdm getkarmamult' command to show their own or another player's karma multiplier.
+# Use the {player} placeholder to display the player's name and {badkarma} as placeholder for the player's bad karma multiplier,
+# and {goodkarma} as placeholder for the player's good karma multiplier.
+get_karma_multiplier_message: '&7{player}''s karma multipliers | &cBad karma : {badkarma}x &7| &aGood karma : {goodkarma}x'
+# Description of the '/pdm getkarmamult' command within '/pdm help'
+get_karma_multiplier_command_description: '&7Shows your karma multiplier or a given player''s karma multiplier'
+
+# Confirmation message when the player uses '/pdm getcurse' command to show their own or another player's curse.
+# Use the {player} placeholder to display the player's name and {curse} as placeholder for the player's curse
+get_curse_message: '&7{player} currently has {curse} curse'
+# Description of the '/pdm getkarma' command within '/pdm help'
+get_curse_command_description: '&7Shows your curse or a given player''s curse'
+
+# Error message when the player uses the '/pdm createnewmob' command and the given monster type is not supported
+create_monster_invalid_monster_error_message: '&cInvalid or unsupported entity type!'
+# Error message when the player uses the '/pdm createnewmob' command and the given monster name already exists
+create_monster_already_exists_error_message: '&cMonster with given name already exists!'
+# Confirmation message when the player uses the '/pdm createnewmob' command successfully
+create_monster_message: '&aEditing new monster, don''t forget to use the save button to save it. Use &e/pdm viewmonsters &ato edit it later.'
+# Description of the '/pdm createnewmob' command within '/pdm help'
+create_monster_command_description: '&7Create a new custom monster'
+
+# Error message when the player uses the '/pdm addloottable' command and the given loot table name already exists
+create_loot_table_already_exists_error_message: '&cLoot table with this name already exists'
+# Error message when the player uses the '/pdm addloottable' command and the given icon type doesn't exist
+create_loot_table_invalid_material_error_message: '&cInvalid material icon'
+# Description of the '/pdm addloottable' command within '/pdm help'
+create_loot_table_command_description: '&7Create a new loot table'
+
+# Confirmation message when the player uses the '/pdm getitem' or '/pdm getspawnegg' command successfully
+get_item_message: '&aItem(s) received!'
+# Description of the '/pdm getitem' command within '/pdm help'
+get_item_command_description: '&7Adds one of the premade custom items to your inventory'
+
+# Error message when the player uses the '/pdm getspawnegg' command and the given monster name does not exist
+get_spawn_egg_error_invalid_name: '&cThe given monster does not exist'
+# Description of the '/pdm getspawnegg' command within '/pdm help'
+get_spawn_egg_command_description: '&7Adds a spawn egg of a vanilla or custom mob to your inventory'
+
+# Confirmation message when the player uses the '/pdm perks <name> remove' command and successfully removes a player's perk
+remove_player_perk_message: '&aPlayer perk removed!'
+# Confirmation message when the player uses the '/pdm perks <name> add' command and successfully adds a player perk
+add_player_perk_message: '&aPlayer perk added!'
+# Error message when the player uses the '/pdm perks <name> remove' command and the player doesn't have the given perk to remove
+remove_player_perk_error: '&cPlayer doesn''t have given perk'
+# Error message when the player uses the '/pdm perks <name> add' command and the player already has the given perk
+add_player_perk_error: '&cPlayer already has given perk'
+# Message sent to the command sender when using the '/pdm perks <name> get' command preceding a list of perks the player has
+get_player_perks_message: '&a{player} has the following perks:'
+# List item syntax of the '/pdm perks <name> get' command
+get_player_perks_item_syntax: '&7- {perk}'
+# Description of the '/pdm perks' command within '/pdm help'
+perks_command_description: '&7Use ''/pdm perks'' to manage level perks, add other arguments to manage player specific perks'
+
+# Description of the '/pdm changenick' command within '/pdm help'
+change_nick_command_description: '&7Used to change or remove the display name of a custom monster'
+
+# ====== ACTIVE ITEMS =============================================================================
+
+# Warning message when a player uses an item that gives curse, but can't because the player has exceeded the curse cap
+# of the item.
+warning_player_curse_exceeded_limit: '&cYou''re too cursed to continue using this relic'
+
+# Warning message when a player attempts to use an item that has a duration or cooldown, but the cooldown or duration
+# of the same previously used item is still active. Use {duration} as placeholder to indicate the time left.
+warning_player_item_duration_active: '&cThis item can be used again in {duration} seconds.'
+
+# Messages sent to the item user when using the evil_revealing_item containing the clicked player's curse and karma.
+# Usable placeholders are {player} for the player name, {curse} for the player curse, and {karma} for the player karma
+evil_revealing_messages_player:
+  - '&8&m                                    '
+  - '&7Player: &c{player}'
+  - '&7Curse: &c{curse}'
+  - '&7Karma: &c{karma}'
+  - '&8&m                                    '
+
+# Messages sent to the item user when using the evil_revealing_item containing if the clicked entity is cursed and its difficulty level.
+# Usable placeholders are {entity_type} for the monster type, {cursed} for if the entity is cursed or not, and {level} for its difficulty level.
+evil_revealing_messages_entity:
+  - '&8&m                                    '
+  - '&7Entity: {type}'
+  - '&7Entity cursed: &c{cursed}'
+  - '&7Difficulty level: &c{level}'
+  - '&8&m                                    '
+

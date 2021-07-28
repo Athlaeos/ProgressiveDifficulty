@@ -1,0 +1,170 @@
+mob_spawn_prevention_item:
+  item:
+    material: 'DIAMOND'
+    name: '&7&lBlessing of Safety'
+    lore:
+      - '&9Consumable'
+      - '&8&m                               '
+      - '&7Prevents natural mob spawning'
+      - '&7around you for 20 minutes.'
+      - '&8&m                               '
+      - '&c+1 curse'
+  curse_influence: 1 # The amount of curse added when a player uses this item
+  curse_limit: 10 # If a player has this amount of curse, they can no longer use the item
+  use_recipe: true # If false, item is not craftable
+  recipe:
+    shape:
+      - ' E '
+      - 'BDB'
+      - ' E '
+    D: 'DIAMOND'
+    B: 'BLAZE_ROD'
+    E: 'EMERALD'
+  duration: 1200 # duration in seconds
+  cooldown: 1800 # cooldown of usage in seconds, after using this item it can't be used again for # seconds
+  # Warning: restarting the server also resets the cooldown.
+
+mob_area_damage_item:
+  item:
+    material: 'BLAZE_ROD'
+    name: '&4&lCurse of power'
+    lore:
+      - '&9Consumable'
+      - '&8&m                               '
+      - '&7Inflicts 100 true damage to'
+      - '&7non-boss creatures around you.'
+      - '&8&m                               '
+  curse_influence: 0
+  curse_limit: 10000
+  use_recipe: true
+  recipe:
+    shape:
+      - ' M '
+      - 'BDB'
+      - ' M '
+    D: 'DIAMOND'
+    B: 'BLAZE_ROD'
+    M: 'MAGMA_BLOCK'
+  cooldown: 15
+  damage: 100
+  radius: 8
+
+enable_cursed_drops_item: # This item is only really usable if you've configured cursed mobs to not drop items
+  item:
+    material: 'EMERALD'
+    name: '&c&lCurse of looting'
+    lore:
+      - '&9Consumable'
+      - '&8&m                               '
+      - '&7Cursed enemies will drop'
+      - '&7their items as if they weren''t'
+      - '&7cursed for 10 minutes, but your'
+      - '&7damage dealt will be reduced by'
+      - '&720% from melee attacks, and 40%'
+      - '&7from ranged attacks.'
+      - '&8&m                               '
+  curse_influence: 0
+  curse_limit: 11
+  use_recipe: false
+  recipe:
+    shape:
+      - ' G '
+      - 'IEI'
+      - ' G '
+    E: 'EMERALD'
+    I: 'IRON_BLOCK'
+    G: 'GOLD_INGOT'
+  melee_debuff: 0.8 # These represent the multiplier of your damage. 0.8 means you'll do 80% of the damage instead of 100%
+  ranged_debuff: 0.6
+  cooldown: 900
+  duration: 600
+
+cleanse_debuffs:
+  item:
+    material: 'MILK_BUCKET'
+    name: '&9&lPanacea'
+    lore:
+      - '&9Consumable'
+      - '&8&m                               '
+      - '&7All debuffs will be cleared off'
+      - '&7you, and you''ll be immune to'
+      - '&7debuffs for an additional 3'
+      - '&7minutes.'
+      - '&8&m                               '
+  curse_influence: 0
+  curse_limit: 10000
+  use_recipe: true
+  recipe:
+    shape:
+      - ' G '
+      - 'DMD'
+      - ' G '
+    D: 'DIAMOND'
+    M: 'MILK_BUCKET'
+    G: 'GOLDEN_APPLE'
+  cooldown: 240
+  duration: 180
+
+cleanse_single_curse_item:
+  item:
+    material: 'PAPER'
+    name: '&b&lScripture of cleansing'
+    lore:
+      - '&9Consumable'
+      - '&8&m                               '
+      - '&7Lowers your curse by 1 point.'
+      - '&7This may sting.'
+      - '&8&m                               '
+  curse_limit: 11
+  use_recipe: true
+  recipe:
+    shape:
+      - ' D '
+      - 'DPD'
+      - ' D '
+    D: 'DIAMOND'
+    P: 'PAPER'
+  cooldown: 0
+
+cleanse_all_curse_item:
+  item:
+    material: 'BOOK'
+    name: '&4&lForbidden tome of cleansing'
+    lore:
+      - '&9Consumable'
+      - '&8&m                               '
+      - '&7Completely cleanses your curse.'
+      - '&7This may hurt'
+      - '&8&m                               '
+  curse_limit: 11
+  use_recipe: true
+  recipe:
+    shape:
+      - ' D '
+      - 'DBD'
+      - ' D '
+    D: 'DIAMOND_BLOCK'
+    B: 'BOOK'
+  cooldown: 14400
+
+evil_revealing_item:
+  item:
+    material: 'GOLD_NUGGET'
+    name: '&e&lRelic of true sight'
+    lore:
+      - '&8&m                               '
+      - '&7Reveals players with curse'
+      - '&7and bad karma when clicked.'
+      - '&7Can see through any illusion.'
+      - '&8&m                               '
+  use_recipe: true
+  recipe:
+    shape:
+      - 'GDG'
+      - 'DED'
+      - 'GDG'
+    D: 'DIAMOND'
+    E: 'ENDER_EYE'
+    G: 'GOLD_NUGGET'
+  counter_invisibility: true # If true, this item removes invisibility off right-clicked entities
+  cooldown: 3

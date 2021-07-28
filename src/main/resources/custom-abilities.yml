@@ -1,0 +1,313 @@
+# Icons are sorted alphabetically by their key, using consistent naming conventions is recommended.
+
+# Potion effects that trigger when a monster hits a player
+on_damage_player_abilities:
+  on_damage_poison_a:            # purely for identification, can be anything. Should unique and not be changed after altering.
+    name: '&r&2&lDebuff player: Poison I 0:05' # name of effect, only visible on the icon in the selection menu
+    icon: 'SPIDER_EYE'          # ability icon material
+    effect: 'POISON'            # effect
+    amplifier: 0                # strength of effect
+    duration: 100               # duration in game ticks
+    description:                # description on the icon
+      - '&7Grants poison I for 5 seconds'
+      - '&7on the player when damaged by'
+      - '&7this monster.'
+
+  on_damage_poison_b:
+    name: '&r&2&lDebuff player: Poison I 0:20'
+    icon: 'SPIDER_EYE'
+    effect: 'POISON'
+    amplifier: 0
+    duration: 400
+    description:
+      - '&7Grants poison I for 20 seconds'
+      - '&7on the player when damaged by'
+      - '&7this monster.'
+
+  on_damage_poison_c:
+    name: '&r&2&lDebuff player: Poison II 0:05'
+    icon: 'FERMENTED_SPIDER_EYE'
+    effect: 'POISON'
+    amplifier: 1
+    duration: 100
+    description:
+      - '&7Grants poison II for 5 seconds'
+      - '&7on the player when damaged by'
+      - '&7this monster.'
+
+  on_damage_poison_d:
+    name: '&r&2&lDebuff player: Poison II 0:20'
+    icon: 'FERMENTED_SPIDER_EYE'
+    effect: 'POISON'
+    amplifier: 1
+    duration: 400
+    description:
+      - '&7Grants poison II for 20 seconds'
+      - '&7on the player when damaged by'
+      - '&7this monster.'
+
+  on_damage_blindness_a:
+    name: '&r&7&lDebuff player: Blindness 0:02'
+    icon: 'COAL'
+    effect: 'BLINDNESS'
+    amplifier: 0
+    duration: 40
+    description:
+      - '&7Grants blindness for 2 seconds'
+      - '&7on the player when damaged by'
+      - '&7this monster.'
+
+  on_damage_blindness_b:
+    name: '&r&7&lDebuff player: Blindness 0:05'
+    icon: 'COAL'
+    effect: 'BLINDNESS'
+    amplifier: 0
+    duration: 100
+    description:
+      - '&7Grants blindness for 5 seconds'
+      - '&7on the player when damaged by'
+      - '&7this monster.'
+
+  on_damage_harming_a:
+    name: '&r&4&lDebuff player: Instant Damage I'
+    icon: 'POTION'
+    effect: 'HARM'
+    amplifier: 0
+    duration: 1
+    description:
+      - '&7Deals 2 hearts of magic damage'
+      - '&7to the player when damaged by'
+      - '&7this monster.'
+
+  on_damage_harming_b:
+    name: '&r&4&lDebuff player: Instant Damage II'
+    icon: 'SPLASH_POTION'
+    effect: 'HARM'
+    amplifier: 1
+    duration: 1
+    description:
+      - '&7Deals 4 hearts of magic damage'
+      - '&7to the player when damaged by'
+      - '&7this monster.'
+
+  on_damage_slowness_a:
+    name: '&r&7&lDebuff player: Slowness I 0:05'
+    icon: 'ICE'
+    effect: 'SLOW'
+    amplifier: 0
+    duration: 100
+    description:
+      - '&7Grants Slowness I for 5 seconds'
+      - '&7on the player when damaged by'
+      - '&7this monster.'
+
+  on_damage_slowness_b:
+    name: '&r&7&lDebuff player: Slowness I 0:20'
+    icon: 'ICE'
+    effect: 'SLOW'
+    amplifier: 0
+    duration: 400
+    description:
+      - '&7Grants Slowness I for 20 seconds'
+      - '&7on the player when damaged by'
+      - '&7this monster.'
+
+  on_damage_slowness_c:
+    name: '&r&7&lDebuff player: Slowness IV 0:03'
+    icon: 'BLUE_ICE'
+    effect: 'SLOW'
+    amplifier: 0
+    duration: 60
+    description:
+      - '&7Grants Slowness IV for 3 seconds'
+      - '&7on the player when damaged by'
+      - '&7this monster, nearly freezing'
+      - '&7them in place.'
+
+# Potion effects that trigger on the mob when a player damages them
+on_damaged_by_player_abilities:
+  on_damaged_by_player_regeneration_a:
+    name: '&r&7&lBuff mob: Regeneration I 0:05'
+    icon: 'GOLDEN_APPLE'
+    effect: 'REGENERATION'
+    amplifier: 0
+    duration: 100
+    description:
+      - '&7Grants Regeneration I for 5 seconds'
+      - '&7on the monster when damaged by'
+      - '&7a player.'
+
+  on_damaged_by_player_regeneration_b:
+    name: '&r&7&lBuff mob: Regeneration II 0:05'
+    icon: 'ENCHANTED_GOLDEN_APPLE'
+    effect: 'REGENERATION'
+    amplifier: 0
+    duration: 100
+    description:
+      - '&7Grants Regeneration II for 5 seconds'
+      - '&7on the monster when damaged by'
+      - '&7a player.'
+
+# Potion effects that are applied to the mob immediately on spawning
+on_spawn_abilities:
+  instant_fire_resistance_a:
+    name: '&r&7&lPermanent buff: Fire resistance'
+    icon: 'BLAZE_POWDER'
+    effect: 'FIRE_RESISTANCE'
+    amplifier: 0
+    duration: 720000
+    description:
+      - '&7Grants Fire Resistance permanently'
+      - '&7on the monster when spawned'
+
+  instant_resistance_a:
+    name: '&r&7&lPermanent buff: Resistance I'
+    icon: 'IRON_BLOCK'
+    effect: 'DAMAGE_RESISTANCE'
+    amplifier: 0
+    duration: 720000
+    description:
+      - '&7Grants Resistance I permanently'
+      - '&7on the monster when spawned'
+
+  instant_resistance_b:
+    name: '&r&7&lPermanent buff: Resistance II'
+    icon: 'IRON_BLOCK'
+    effect: 'DAMAGE_RESISTANCE'
+    amplifier: 1
+    duration: 720000
+    description:
+      - '&7Grants Resistance II permanently'
+      - '&7on the monster when spawned'
+
+  instant_speed_a:
+    name: '&r&7&lPermanent buff: Speed I'
+    icon: 'FEATHER'
+    effect: 'SPEED'
+    amplifier: 0
+    duration: 720000
+    description:
+      - '&7Grants Speed I permanently'
+      - '&7on the monster when spawned'
+
+  instant_slow_a:
+    name: '&r&7&lPermanent buff: Slow I'
+    icon: 'ICE'
+    effect: 'SLOW'
+    amplifier: 0
+    duration: 720000
+    description:
+      - '&7Grants Slow I permanently'
+      - '&7on the monster when spawned'
+
+  instant_slow_b:
+    name: '&r&7&lPermanent buff: Slow X'
+    icon: 'BLUE_ICE'
+    effect: 'SLOW'
+    amplifier: 9
+    duration: 720000
+    description:
+      - '&7Grants Slow X permanently'
+      - '&7on the monster when spawned,'
+      - '&7making them unable to move'
+      - '&7aside from jumping, flying,'
+      - '&7or leaping.'
+
+  instant_weakness_a:
+    name: '&r&7&lPermanent buff: Weakness I'
+    icon: 'ROTTEN_FLESH'
+    effect: 'WEAKNESS'
+    amplifier: 0
+    duration: 720000
+    description:
+      - '&7Grants Weakness I permanently'
+      - '&7on the monster when spawned'
+
+retaliation_abilities:
+  retaliation_slow_a:
+    name: '&r&7&lRetaliation: Slow I'
+    icon: 'ICE'
+    effect: 'SLOW'
+    amplifier: 0
+    duration: 40
+    description:
+      - '&7When damaged by a player, the'
+      - '&7player is debuffed with Weakness.'
+      - '&7I for 2 second.'
+
+  retaliation_slow_b:
+    name: '&r&7&lRetaliation: Slow II'
+    icon: 'PACKED_ICE'
+    effect: 'SLOW'
+    amplifier: 1
+    duration: 40
+    description:
+      - '&7When damaged by a player, the'
+      - '&7player is debuffed with Weakness.'
+      - '&7II for 2 second.'
+
+  retaliation_weakness_a:
+    name: '&r&7&lRetaliation: Weakness I'
+    icon: 'ROTTEN_FLESH'
+    effect: 'WEAKNESS'
+    amplifier: 0
+    duration: 20
+    description:
+      - '&7When damaged by a player, the'
+      - '&7player is debuffed with Weakness.'
+      - '&7I for 1 second.'
+
+  retaliation_weakness_b:
+    name: '&r&7&lRetaliation: Weakness II'
+    icon: 'ROTTEN_FLESH'
+    effect: 'WEAKNESS'
+    amplifier: 1
+    duration: 20
+    description:
+      - '&7When damaged by a player, the'
+      - '&7player is debuffed with Weakness.'
+      - '&7II for 1 second.'
+
+  retaliation_wither_a:
+    name: '&r&7&lRetaliation: Wither II'
+    icon: 'WITHER_SKELETON_SKULL'
+    effect: 'WITHER'
+    amplifier: 1
+    duration: 40
+    description:
+      - '&7When damaged by a player, the'
+      - '&7player is debuffed with Wither.'
+      - '&7II for 2 seconds.'
+
+  retaliation_wither_b:
+    name: '&r&7&lRetaliation: Wither II'
+    icon: 'WITHER_SKELETON_SKULL'
+    effect: 'WITHER'
+    amplifier: 1
+    duration: 100
+    description:
+      - '&7When damaged by a player, the'
+      - '&7player is debuffed with Wither.'
+      - '&7II for 5 seconds.'
+
+  retaliation_harming_a:
+    name: '&r&7&lRetaliation: Instant Damage I'
+    icon: 'SPLASH_POTION'
+    effect: 'HARM'
+    amplifier: 0
+    duration: 1
+    description:
+      - '&7When damaged by a player, the'
+      - '&7player is hit with Instant'
+      - '&7Damage I'
+
+  retaliation_harming_b:
+    name: '&r&7&lRetaliation: Instant Damage II'
+    icon: 'SPLASH_POTION'
+    effect: 'HARM'
+    amplifier: 1
+    duration: 1
+    description:
+      - '&7When damaged by a player, the'
+      - '&7player is hit with Instant'
+      - '&7Damage II'

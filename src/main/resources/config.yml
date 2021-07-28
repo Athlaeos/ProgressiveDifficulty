@@ -1,0 +1,159 @@
+#===  LISTENERS  ===================================================================================
+# Disable listeners here if they're causing trouble with other plugins
+block_place: true
+block_break: true
+animal_breed: true
+entity_damage_entity: true
+entity_damage: true
+entity_killed: true
+entity_spawn: true
+entity_target: true
+player_interact: true
+player_interact_entity: true
+potion_effect_chance: true
+raid_end: true
+
+#===  KARMA  ===================================================================================
+
+# Forces everyone to participate in the karma system immediately on joining if set to true.
+# If false players have to use the command /pdm togglekarma
+force_karma: false
+
+# The default karma players start off with
+default_karma: 0.0
+
+# The default bad karma multiplier players start off with, any bad karma players obtain is multiplied by this
+# amount. Set to 0 if you don't want players to lose karma.
+default_bad_karma_multiplier: 1.0
+
+# The default good karma multiplier players start off with, any good karma players obtain is multiplied by this
+# amount. Set to 0 if you don't want players to gain karma.
+default_good_karma_multiplier: 1.0
+
+# Chance for a regular monster to spawn as a customized monster in %
+chance_custom_spawn: 100
+
+# Default karma influence when any passive mob is killed (This includes ambient mobs like bats and neutral mobs like bees)
+karma_onkill_passive: -10
+# Default karma influence when any hostile mob is killed
+karma_onkill_hostile: -5
+
+# Karma influence when a raid is won, this affects all players within a radius of 96 blocks from the center raid location
+karma_raid_victory: 200.0
+# Karma influence when a raid is lost, this affects all players within a radius of 96 blocks from the center raid location
+karma_raid_loss: -200.0
+
+# Karma influence when the player dies if the player has negative karma
+karma_influence_player_evil:
+  karma_influence: 20
+  fractional: true # If true, the karma influence will instead be a percentage reduction rather than flat reduction.
+  # Example: 20/false will grant the player 20 good karma, if 20/true the player gain 20% of their current bad karma as good karma
+  mitigated: false # If true, the player's current karma diminishing returns reduce the karma obtained on death
+
+# Karma influence when the player dies if the player has positive karma
+karma_influence_player_good:
+  karma_influence: -10
+  fractional: true # If true, the karma influence will instead be a percentage reduction rather than flat reduction.
+  # Example: -20/false will grant the player 20 bad karma, if -20/true the player gain 20% of their current good karma as bad karma
+  mitigated: false # If true, the player's current karma diminishing returns reduce the karma obtained on death
+
+# Amount of karma you may go over the cap with. With a buffer of 0 it's extremely hard to maintain -1000 or 1000 karma,
+# since any amount of karma gain or loss immediately puts you back to level -9 or 9. With this buffer it allows some room for
+# get over that. With a buffer of 50 minimum karma will be -1050 instead of -1000 for example.
+karma_buffer: 50
+
+# Big explanation ahead, you can skip this if you don't care for more advanced configuration
+# The equations used to calculate the fraction of karma players will obtain
+# With the default equation: ((1 / (110)^2) * ((1100) + {player_karma})^2) / 100, the player gains less
+# good and bad karma the more good or bad karma they have respectively. Essentially acting as diminishing returns
+# and making it harder for the player to quickly get to very high or low amounts of karma.
+# Only alter the equations if you know what you're doing, as it's easy to break or unbalance.
+# It's recommended to check your equations in a graphic calculator with a y-range between 0 and 1 and an x-range
+# of between the minimum and maximum karma obtainable (ex. -1000 to 1000), where x is the player's karma
+# and y is the multiplier the player's obtained karma will be multiplied with. (I like to use desmos.com)
+
+# For the default equation, ((1 / (110)^2) * ((1100) + {player_karma})^2) / 100, the numbers 110 and 1100
+# (110 just being 1100/10, this is important) determine the steepness of the karma multiplier graph.
+# Higher numbers decrease the steepness, and the graph hits a multiplier of 0 at the number given.
+# (If you replace 110 and 1100 with, for example, 50 and 500 and the player has exactly 500 karma they would not be
+# able to gain or lose karma. Since this is not effective or reliable it's recommended to keep this number
+# at or above the minimum/maximum karma
+bad_karma_gain_negative: '((1 / (110)^2) * ((1100) + {player_karma})^2) / 100' # Bad karma gain if player has negative karma
+bad_karma_gain_positive: '1' # Bad karma gain if player has positive karma
+good_karma_gain_negative: '((1 / (110)^2) * ((1100) + {player_karma})^2) / 200' # Good karma gain if player has negative karma
+good_karma_gain_positive: '((1 / (110)^2) * ((1100) - {player_karma})^2) / 100' # Good karma gain if player has positive karma
+
+# The highest (easiest) difficulty level people can reach (Also increases max. karma one can get)
+# If higher than 10, you can edit additional spawn tables for each extra level accessible through /pdm monsters
+# The GUI for this won't look as nice, and it should be noted more spawn tables/monsters registered will take
+# the plugin longer to load everything into the game from startup as well as use more memory.
+# WIP, has no functionality as of yet
+max_karma_lv: 10
+
+# The lowest (hardest) difficulty level people can reach (Also decreases min. karma one can get). Can not be more than 0
+# If lower than -10, you can edit additional spawn tables for each lower level accessible through /pdm monsters
+# The GUI for this won't look as nice, and it should be noted more spawn tables/monsters registered will take
+# the plugin longer to load everything into the game from startup as well as use more memory.
+# WIP, has no functionality as of yet
+min_karma_lv: -10
+
+# If true, if a player ever reaches 1000 or -1000, their karma will be locked permanently.
+i_have_chosen_my_fate: false
+
+# If true, when a player toggles their karma usage to "true" using '/pdm togglekarma' this cannot be toggled back to "false"
+# Choosing to participate will basically be a permanent choice
+permanent_enable_on_toggle: false
+
+#===  CURSE  ===================================================================================
+
+# Maximum amount of curse a player is able to have
+max_curse: 10
+
+# The increased chance per level of curse to spawn a cursed entity, in percentages
+curse_chance: 10.0
+
+# If true, non-custom monsters can spawn cursed too
+vanilla_cursed: true
+
+# If true, cursed monsters don't drop any items
+cursed_drop_prevention: false
+
+# If true, cursed monsters drop double the items they would normally drop (is overridden by cursed_drop_prevention)
+cursed_drop_doubling: true
+
+# The exp amount dropped by a cursed monster on death will be multiplied by this amount
+# Since exp values have to be whole numbers, the end result is rounded downwards to the nearest whole number.
+cursed_exp_multiplier: 2.0
+
+# The hp multiplier of a cursed entity. With a multiplier of 2x an entity with 20 health will have 40 health if cursed
+cursed_health_multiplier: 2.25
+
+# The damage multiplier of a cursed entity. With a multiplier of 2x an entity does twice the damage if spawned cursed
+cursed_damage_multiplier: 2.0
+
+# The hp multiplier of a cursed boss entity. With a multiplier of 2x an entity with 200 health will have 400 health if cursed
+cursed_boss_health_multiplier: 1.5
+
+# The damage multiplier of a cursed boss entity. With a multiplier of 2x an entity does twice the damage if spawned cursed
+cursed_boss_damage_multiplier: 2.0
+
+#===  OTHER  ===================================================================================
+
+# The view distance bosses' Boss Bars will be visible at
+boss_bar_view_distance: 64
+
+# The plugin uses runnables for some of the animations that go on with certain items and cursed monster animations,
+# but an excessive amount of these can be of detriment to the server performance.
+# Set this to 'false' to disable these animation runnables, recommended on lower-end hardware servers.
+animation_runnables: true
+# Disabling animation_runnables will mean:
+# - Cursed mobs don't emit smoke and will become indistinguishable from normal mobs aside from their increased damage and health.
+# - Items such as mob_area_damage_item will not display an animation or a delay and will instead immediately fire off without visual effects
+
+# The plugin spawns quite a few particles for visual effects, but an excessive usage of these might be of detriment
+# to the server and client performance. With default usage, this shouldn't be a problem. But if custom items and such are used
+# in large amounts in a small space it might lag some people's systems and the server for a short time
+# Set to 'false' to disable these animation particles
+animation_particles: true
+# Disabling animation_particles will mean:
+# - The plugin will not use any particles for any animation at all
